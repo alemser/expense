@@ -23,6 +23,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.flywaydb:flyway-core")
+	implementation("ch.qos.logback:logback-core:1.2.3")
+	implementation("ch.qos.logback:logback-classic:1.2.3")
+	implementation("org.slf4j:slf4j-api:1.7.29")
 	runtimeOnly("com.h2database:h2") // for sake of simplicity
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {

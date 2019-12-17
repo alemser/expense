@@ -8,6 +8,22 @@ The user should be able to query for expenses grouping by categories and rank ex
 
 # Quick start
 
-The very quick way to put it up and running is building within a docker image.
+Make sure you have JDK8 or higher and run the following command in the root folder of the project:
 
-Make sure you have docker installed and run the following command:
+Linux/Mac
+
+```./gradlew bootRun```
+
+Windows
+
+```gradlew bootRun```
+
+# Creating a expense
+
+```
+curl -v POST http://localhost:8080/api/expenses \
+-H "Content-Type: application/json" \
+-d '{"amount": 35.20, "category": "Travel"}'
+```
+
+You should see the response headers with the location to retrieve the newly created expense and the ETag.

@@ -4,3 +4,4 @@ CREATE TABLE expense (
     category VARCHAR,
     version BIGINT NOT NULL
 );
+CREATE INDEX category_idx ON expense(category);
