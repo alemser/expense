@@ -1,0 +1,6 @@
+spring:
+  datasource: # normally not a h2 db!
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:proddb
+    username: prod
+    password:
