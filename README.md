@@ -3,10 +3,8 @@ A demo project
 
 This demo project main purpose is to manage expenses.
 
-Basically, the application allow users to create an expense informing a label (category) an amount and a date. 
-The application is not complete, and the idea is to allow the users to query for expenses grouping by category.
-
-```Currently the application ```
+Basically, the application allow users to create an expense informing a label (category), an amount and a date. 
+The application is not complete, and the idea is to allow users to query for expenses grouping by category.
 
 # Quick start
 
