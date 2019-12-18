@@ -1,6 +1,7 @@
 package com.example.expense.model
 
 import java.math.BigDecimal
+import java.time.OffsetDateTime
 import javax.persistence.*
 import javax.persistence.Version
 
@@ -13,6 +14,7 @@ data class ExpenseEntity (
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: ExpenseId? = null,
         val amount: BigDecimal,
+        val date: OffsetDateTime,
         val category: String,
         @Version
         val version: EntityVersion = 0

@@ -20,7 +20,7 @@ class ExpenseService {
     fun create(expenseData: ExpenseData): Pair<ExpenseId, EntityVersion> {
         logger.debug("About to create a new expense {}", expenseData)
 
-        val entity = ExpenseEntity(category = expenseData.category, amount = expenseData.amount)
+        val entity = ExpenseEntity(category = expenseData.category, amount = expenseData.amount, date = expenseData.date)
 
         val createdEntity = expenseRepository.save(entity)
 

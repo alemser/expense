@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
+import javax.validation.Valid
 
 @RestController
 @RequestMapping("/api")
@@ -20,7 +21,7 @@ class ExpenseApi {
     lateinit var expenseService: ExpenseService
 
     @PostMapping(value = ["/expenses"], consumes = ["application/json"])
-    fun create(@RequestBody expense: ExpenseData): ResponseEntity<Void> {
+    fun create(@Valid @RequestBody expense: ExpenseData): ResponseEntity<Void> {
 
         val (newId, currentVersion) = expenseService.create(expense)
 
